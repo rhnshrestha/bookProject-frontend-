@@ -1,9 +1,25 @@
+import { useState } from "react"
+
 function Home(){
+    // let meroNumber = 0 ;
+    
+    // function increaseNumber(){
+    //     meroNumber = increaseNumber + 1;
+    //     console.log(meroNumber);
+    // }
+    // function decreaseNumber(){
+    //     meroNumber = increaseNumber - 1;
+    // }
+    let [count, setCount] = useState(100) 
+    
+    
     return (
         <>
-        <h1>This is a home page</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo hic consequuntur consectetur, expedita distinctio tenetur, fuga unde ad quod dolorem accusamus ab quia similique totam repudiandae vero ut non ullam!</p>
-
+       <h1>Learning useState hook</h1>
+        <h1>{count}</h1>
+       <button onClick={()=> setCount(count + 1)}>+</button> 
+       <button onClick={()=> setCount(count - 1)}>-</button> 
+        
         </>
     )
 }
